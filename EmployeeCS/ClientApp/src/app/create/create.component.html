@@ -1,0 +1,54 @@
+<div class="container col-md-4">
+    <div class="create__container row">
+    <div class="col-md-5">
+      <p>First name</p>
+      <p>Last name</p>
+      <p>Gender</p>
+      <p>City</p>
+    </div>
+    <div class="col-md-7">
+      <form [formGroup]="createForm" (ngSubmit)="createEmployee($event)">
+        <input
+          formControlName="firstName"
+          type="text"
+          placeholder="First name"
+        />
+        <div
+          *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="firstName.errors?.required">First name is required.</div>
+          <div *ngIf="firstName.errors?.minlength">
+            First name must be at least 3 characters long.
+          </div>
+        </div>
+        <input formControlName="lastName" type="text" placeholder="Last name" />
+        <div
+          *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="lastName.errors?.required">Last name is required.</div>
+          <div *ngIf="lastName.errors?.minlength">
+            Last name must be at least 3 characters long.
+          </div>
+        </div>
+        <select formControlName="gender">
+          <option value="0">Male</option>
+          <option value="1">Female</option>
+        </select>
+        <input formControlName="city" type="text" placeholder="City" />
+        <div
+          *ngIf="city.invalid && (city.dirty || city.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="city.errors?.required">City is required.</div>
+          <div *ngIf="city.errors?.minlength">
+            City must be at least 2 characters long.
+          </div>
+        </div>
+        <input type="submit" class="create__button" value="Create" [disabled]="!createForm.valid"/>
+        <button class="create__button" (click)="cancelCreate()">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

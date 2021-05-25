@@ -1,0 +1,37 @@
+.create__container [type="text"], .create__container select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.create__container p {
+    line-height: 2em;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.error__block {
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  height: 120px;
+  margin-top: -150px;
+  width: 700px;
+  margin-left: -350px;
+  text-align: center;
+  background: red;
+  color: white;
+  padding: 20px;
+}
+
+.create__button:last-child{
+  float: right;
+}
+
+.create__button {
+  width: 47%;
+  border-radius: 5px;
+  height: 30px;
+  float: left;
+}
+

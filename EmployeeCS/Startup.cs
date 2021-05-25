@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BLL;
+using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 namespace EmployeeCS
 {
@@ -20,8 +23,10 @@ namespace EmployeeCS
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            // In production, the Angular files will be served from this directory
+            ConfiguratorBLL.Configure(services, Configuration);
+            services.AddControllers().AddNewtonsoftJson();
+
+
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";

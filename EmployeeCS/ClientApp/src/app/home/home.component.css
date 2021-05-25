@@ -1,0 +1,118 @@
+.employee__item {
+  cursor: pointer;
+}
+
+.employee__details,
+.employee_container {
+  border: solid 2px grey;
+  padding: 10px;
+}
+
+.employee__details,
+.employee_container,
+.details__label,
+.list__label {
+  margin: 0 10px;
+}
+
+.employee__item {
+  border: solid 1px grey;
+  padding: 10px;
+}
+
+.details__label {
+  position: relative;
+  padding: 0;
+}
+
+.details__label span {
+  position: absolute;
+  bottom: 10px;
+}
+
+.list__label {
+  padding: 0;
+}
+
+.list__label button {
+  width: 32%;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.list__label button:nth-child(3) {
+  margin: 10px 2%;
+}
+
+.confirmation__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  margin-top: -100px; /* half of you height */
+  width: 400px;
+  margin-left: -200px; /* half of you width */
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.confirmation__button {
+  width: 100px;
+  height: 45px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.edit__container, .create__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 300px;
+  margin-top: -150px; /* half of you height */
+  width: 400px;
+  margin-left: -200px; /* half of you width */
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.edit__container [type="text"], .edit__container select,
+.create__container [type="text"], .create__container select {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 100%;
+}
+
+.edit__button{
+  width: 47%;
+  border-radius: 5px;
+  height: 30px;
+  float: left;
+}
+
+.edit__button:last-child {
+  float: right;
+}
+
+.error__block {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 120px;
+  margin-top: -150px; /* half of you height */
+  width: 700px;
+  margin-left: -350px;
+  text-align: center;
+  background: red;
+  color: white;
+  padding: 20px;
+}
+
+
